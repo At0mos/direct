@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Direct. Messages delivered straight to you.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" >
+    
+    <!-- App Styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside>
+      <div id="account-btn" class="btn">
+        <img id="avatar" src="http://via.placeholder.com/40x40" alt="account avatar">
+      </div>
+      <div class="separator separator-light"></div>
+      <ul id="conv-list">
+        <!-- Build dynamically  -->
+        <li class="conv">
+          <img id="avatar" src="http://via.placeholder.com/40x40" alt="conversation">
+          <div class="conv-notification"></div>
+        </li>
+        <li class="conv">
+          <img id="avatar" src="http://via.placeholder.com/40x40" alt="conversation">
+          <div class="conv-notification hidden"></div>
+        </li>
+        <li class="conv">
+          <img id="avatar" src="http://via.placeholder.com/40x40" alt="conversation">
+          <div class="conv-notification"></div>
+        </li>
+        <li class="conv">
+          <img id="avatar" src="http://via.placeholder.com/40x40" alt="conversation">
+          <div class="conv-notification"></div>
+        </li>
+        <li class="conv">
+          <img id="avatar" src="http://via.placeholder.com/40x40" alt="conversation">
+          <div class="conv-notification hidden"></div>
+        </li>
+        <li class="conv">
+          <img id="avatar" src="http://via.placeholder.com/40x40" alt="conversation">
+          <div class="conv-notification hidden"></div>
+        </li>
+        <li class="conv">
+          <img id="avatar" src="http://via.placeholder.com/40x40" alt="conversation">
+          <div class="conv-notification hidden"></div>
+        </li>
+        <li class="conv">
+          <img id="avatar" src="http://via.placeholder.com/40x40" alt="conversation">
+          <div class="conv-notification hidden"></div>
+        </li>
+      </ul>
+      <div class="separator separator-light"></div>
+      <div id="add_conv" class="btn">
+        <i class="material-icons">add</i>
+      </div>
+    </aside>
+    <header>
+        <div class="left">
+          <div class="btn btn-light">
+            <i class="material-icons">menu</i>
+          </div>
+          <div class="btn btn-light typo-title">@yourself</div>
+        </div>
+        <div class="right">
+          <div id="help" class="btn btn-light">
+            <i class="material-icons">more_vert</i>
+          </div>
+        </div>
+    </header>
+    <main id="chat">
+      <div class="message">
+        <div class="chip typo-body1">
+          <img class="avatar" src="http://via.placeholder.com/40x40/" alt="avatar">
+          <div class="username">Joshua Le Tallec</div>
+        </div>
+        <div class="message-text">Hello world!</div>
+        <div class="timestamp typo-caption">16:23</div>
+      </div>
+    </main>
+    <footer>
+      <form>
+        <label id="upload-label" for="file-upload">
+          <i class="material-icons">attachment</i>
+        </label>
+        <input id="file-upload" type="file" name="imgInput">
+        <textarea id="msg-input" class="typo-body1" rows="1" placeholder="Envoyer un message..."></textarea>
+      </form>
+    </footer>
+  </div>
+
+  <div class="drawer hidden">
+    <header>
+      <img src="http://via.placeholder.com/56x56" alt="account avatar">
+      <div class="user-infos">
+        <h1 class="typo-body2">Prénom Nom</h1>
+        <h2 class="typo-caption">Pseudo</h2>
+        <h2 class="typo-caption">e.mail@address.com</h2>
+      </div>
+    </header>
+    <div class="separator separator-light"></div>
+    <ul class="typo-body2">
+      <li><i class="material-icons">account_circle</i>Profil</li>
+      <li><i class="material-icons">people</i>Contacts</li>
+      <li><i class="material-icons">add_alert</i>Notifications</li>
+      <li><i class="material-icons">palette</i>Apparence</li>
+      <li><i class="material-icons">info</i>À Propos</li>
+    </ul>
+  </div>
+
+  <div class="overlays hidden">
+    <section id="overlay-1" class="overlay hidden">
+        <h1 class="typo-title">Overlay 1 Title</h1>
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in felis in ante luctus condimentum sed et risus. Donec eget est tempor, maximus nulla id, molestie nibh. Cras molestie magna sem, at consectetur tortor tempus non.</p>
+          <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+          </ul>
+        </div>
+      <footer>
+          <button class="typo-button">CLOSE</button>
+      </footer>
+    </section>
+
+    <section id="overlay-2" class="overlay hidden">
+      <h1 class="typo-title">Overlay 2</h1>
+      <div class="inputs">
+        <input class="typo-body1" type="text" placeholder="">
+        <label class="typo-caption">Input Label</label>
+      </div>
+      <footer>
+        <button id="chan-close" class="typo-button">CANCEL</button>
+        <button id="chan-connect" class="typo-button">OK</button>
+      </footer>          
+    </section>
+  </div>
+  <!-- Import the Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
