@@ -61,7 +61,7 @@
     </aside>
     <header>
         <div class="left">
-          <div class="btn btn-light">
+          <div id="drawer-open-btn" class="btn btn-light">
             <i class="material-icons">menu</i>
           </div>
           <div class="btn btn-light typo-title">@yourself</div>
@@ -93,23 +93,26 @@
     </footer>
   </div>
 
-  <div class="drawer hidden">
-    <header>
-      <img src="http://via.placeholder.com/56x56" alt="account avatar">
-      <div class="user-infos">
-        <h1 class="typo-body2">Prénom Nom</h1>
-        <h2 class="typo-caption">Pseudo</h2>
-        <h2 class="typo-caption">e.mail@address.com</h2>
-      </div>
-    </header>
-    <div class="separator separator-light"></div>
-    <ul class="typo-body2">
-      <li><i class="material-icons">account_circle</i>Profil</li>
-      <li><i class="material-icons">people</i>Contacts</li>
-      <li><i class="material-icons">add_alert</i>Notifications</li>
-      <li><i class="material-icons">palette</i>Apparence</li>
-      <li><i class="material-icons">info</i>À Propos</li>
-    </ul>
+  <div id="drawer-wrapper" class="hidden">
+    <div id="drawer" class="drawer drawer-hidden">
+      <header>
+        <img src="http://via.placeholder.com/56x56" alt="account avatar">
+        <div class="user-infos">
+          <h1 class="typo-body2">Prénom Nom</h1>
+          <h2 class="typo-caption">Pseudo</h2>
+          <h2 class="typo-caption">e.mail@address.com</h2>
+        </div>
+        <i id="drawer-close-btn" class="material-icons">keyboard_arrow_left</i>
+      </header>
+      <div class="separator separator-light"></div>
+      <ul class="typo-body2">
+        <li><i class="material-icons">account_circle</i>Profil</li>
+        <li><i class="material-icons">people</i>Contacts</li>
+        <li><i class="material-icons">add_alert</i>Notifications</li>
+        <li><i class="material-icons">palette</i>Apparence</li>
+        <li><i class="material-icons">info</i>À Propos</li>
+      </ul>
+    </div>
   </div>
 
   <div class="overlays hidden">

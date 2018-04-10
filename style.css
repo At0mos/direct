@@ -366,29 +366,53 @@ body .app footer form textarea::-moz-placeholder {
   font-family: 'Roboto', sans-serif;
 }
 
+body #drawer-wrapper {
+  background: rgba(0, 0, 0, .12);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 3;
+}
+
 body .drawer {
   background: var(--color-background-light);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, .12), 0 6px 10px rgba(0, 0, 0, .24);
-  -moz-box-shadow: 0 6px 16px rgba(0, 0, 0, .12), 0 6px 10px rgba(0, 0, 0, .24);
-  -webkit-box-shadow: 0 6px 16px rgba(0, 0, 0, .12), 0 6px 10px rgba(0, 0, 0, .24);
   bottom: 0;
-  left: -280px;
   margin-right: 56px;
   width: 280px;
   position: fixed;
   top: 0;
-  z-index: 3;
+  transition: 0.6s;
+  z-index: 4;
 }
 
-body .drawer:after {
-  content: "";
-  width: 100%;
+body .drawer-hidden {
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  left: -280px;
+}
+
+body .drawer-shown {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .12), 0 6px 10px rgba(0, 0, 0, .24);
+  -moz-box-shadow: 0 6px 16px rgba(0, 0, 0, .12), 0 6px 10px rgba(0, 0, 0, .24);
+  -webkit-box-shadow: 0 6px 16px rgba(0, 0, 0, .12), 0 6px 10px rgba(0, 0, 0, .24);
+  left: 0;
 }
 
 body .drawer header {
+  align-items: center;
   display: flex;
+  justify-content: flex-start;
   height: 56px;
   padding: 16px;
+}
+
+body .drawer .user-infos {
+  width: 136px;
 }
 
 body .drawer header img {
